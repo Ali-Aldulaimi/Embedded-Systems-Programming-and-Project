@@ -235,7 +235,7 @@ int check_input_reg(char rec) {
 
 /*******************************************************************************************/
 
-void Response_frame(int Value1, int value2, int value3) {
+void Response_frame(int internal_Temp, int external_Temp, int cell_VOl) {
 // Turn on a control LED while sending data
 	GPIOA->ODR |= 0x20;
 
