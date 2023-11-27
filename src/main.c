@@ -16,9 +16,9 @@ int main(void) {
 
 	char Received_frame[13] = { 0 };
 	uint16_t wlength = 13;
-	int int_temp = 0;
+	//int int_temp = 0;
 	int LM35_temp = 0;
-	int cell_voltage = 0;
+	//int cell_voltage = 0;
 	int check = 0;
 	int Int_temp = 0;
 	char internal_sensor_high_byte = 0;
@@ -28,12 +28,12 @@ int main(void) {
 	char cell_high_byte = 0;
 	char cell_low_byte = 0;
 
-	char buf[200];	// contain transfering data
+	//char buf[200];	// contain transfering data
 
 	char cell_vol[4] = { 0, 0, 0, 0 };
 	float battery_vol = 0;
-	float shunt_resistor = 0.01;
-	float current = 0;
+	//float shunt_resistor = 0.01;
+	//float current = 0;
 
 	GPIOA->ODR &= ~(1 << Select_Pin_B);
 	GPIOA->ODR &= ~(1 << Select_Pin_A);
@@ -80,7 +80,7 @@ int main(void) {
 					external_sensor_high_byte = (LM35_temp >> 8)
 							| external_sensor_high_byte;
 					external_sensor_low_byte = LM35_temp
-							| external_sensor_high_byte;
+							| external_sensor_low_byte;
 
 					for (int i = 0; i < 4; i++) {
 						Select_mux_pin(i);
