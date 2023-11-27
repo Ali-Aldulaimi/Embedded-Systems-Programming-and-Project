@@ -19,9 +19,6 @@
 #define SLAVE_ADDR 0x01
 #define START_ADDR 0x01
 
-char internal_Temp = 0;
-char external_Temp = 0;
-char cell_VOl = 0;
 unsigned short int calculatedCRC;
 
 void Adc_set_up();
